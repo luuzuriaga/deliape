@@ -4,6 +4,7 @@ import { client } from "@/sanity/lib/client";
 import { ProductCard } from "@/components/ProductCard";
 import { TiktokEmbed } from "@/components/TiktokEmbed";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { ScrollLink } from "@/components/ScrollLink";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 // GROQ Queries
@@ -55,8 +56,8 @@ export default async function Home() {
         </div>
         
         <nav className="hidden md:flex gap-6 text-sm tracking-widest uppercase">
-          <a href="#coleccion" className="hover:text-primary transition-colors">Colección</a>
-          <a href="#instagram" className="hover:text-primary transition-colors">Síguenos</a>
+          <ScrollLink href="#coleccion" className="hover:text-primary transition-colors">Colección</ScrollLink>
+          <ScrollLink href="#instagram" className="hover:text-primary transition-colors">Síguenos</ScrollLink>
         </nav>
       </header>
 
