@@ -2,7 +2,7 @@ import Image from "next/image";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import { ProductCard } from "@/components/ProductCard";
-import { InstagramCarousel } from "@/components/InstagramCarousel";
+import { TiktokEmbed } from "@/components/TiktokEmbed";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
@@ -167,11 +167,11 @@ export default async function Home() {
       </section>
 
       {/* Instagram Section */}
-      <section id="instagram" className="py-32 px-4 bg-black/5">
+      <section id="instagram" className="py-20 px-4 bg-black/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <span className="text-primary font-medium tracking-widest uppercase text-sm mb-4 block">Síguenos</span>
-            <h2 className="text-4xl font-serif font-light mb-6">@delia.pe</h2>
+            <h2 className="text-4xl font-serif font-light mb-6">@deliafajasylenceria</h2>
             <div className="flex justify-center gap-6">
               {socials?.instagram && (
                 <a href={socials.instagram} target="_blank" rel="noreferrer" className="text-foreground/60 hover:text-foreground hover:scale-110 transition-all">
@@ -191,7 +191,7 @@ export default async function Home() {
             </div>
           </div>
           
-          <InstagramCarousel url={content?.instagramCarouselUrl} />
+          <TiktokEmbed url={content?.tiktokEmbedUrl} />
         </div>
       </section>
 

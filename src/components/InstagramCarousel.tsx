@@ -37,10 +37,10 @@ export function InstagramCarousel({ url }: InstagramCarouselProps) {
   const embedUrl = `${baseUrl}/embed`
 
   return (
-    <div className="w-full max-w-md mx-auto overflow-hidden bg-transparent">
+    <div className="w-full max-w-xl mx-auto overflow-hidden bg-transparent">
       <iframe
         src={embedUrl}
-        className="w-full border-none min-h-[600px] shadow-sm rounded-md"
+        className="w-full border-none min-h-[500px] shadow-sm rounded-md"
         scrolling="no"
         allow="encrypted-media"
       ></iframe>

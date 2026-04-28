@@ -38,5 +38,11 @@ export const contenidoWeb = defineType({
       description: 'Enlace de la publicación de Instagram a mostrar',
       type: 'url',
     }),
+    defineField({
+      name: 'tiktokEmbedUrl',
+      title: 'URL de Video de TikTok',
+      description: 'Enlace del video de TikTok a mostrar al final de la página',
+      type: 'url',
+    }),
   ],
 })
