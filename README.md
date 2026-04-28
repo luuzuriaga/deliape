@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Delia Fajas y Lencería
 
-## Getting Started
+Este es un proyecto construido con Next.js 14+ (App Router), Tailwind CSS y Sanity.io.
 
-First, run the development server:
+## Autenticación de Sanity (Proteger el Panel)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Sanity Studio viene protegido por defecto usando su sistema de autenticación nativo. No es necesario implementar un sistema extra en Next.js (como NextAuth/Auth.js) para acceder al panel de administración. Solo los miembros de tu proyecto en Sanity pueden acceder a `/studio`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para asegurar que solo la dueña pueda entrar:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Ingresa al panel de control de Sanity: [https://manage.sanity.io](https://manage.sanity.io)
+2. Selecciona el proyecto de **Delia**.
+3. Ve a la pestaña **Members**.
+4. Haz clic en **Invite Member**.
+5. Ingresa el correo electrónico de la dueña (Google/Email).
+6. Asígnale el rol de **Administrator** (para poder cambiar esquemas) o **Editor** (para solo editar contenido y no romper la configuración).
+7. Cuando ella intente acceder a `tusitio.com/studio`, Sanity le pedirá que inicie sesión con su cuenta (Google, GitHub, o Email). Solo ella (y quienes estén en esa lista) podrán ver y modificar los datos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Desarrollo Local
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clona el proyecto.
+2. Instala dependencias: `npm install`
+3. Copia el archivo de entorno (necesitas tu Project ID y Dataset de Sanity):
+   Crea un archivo `.env.local` con:
+   ```env
+   NEXT_PUBLIC_SANITY_PROJECT_ID="tu-project-id"
+   NEXT_PUBLIC_SANITY_DATASET="production"
+   ```
+4. Ejecuta el servidor: `npm run dev`
+5. La página web corre en `http://localhost:3000`
+6. El panel de administración corre en `http://localhost:3000/studio`
