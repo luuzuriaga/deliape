@@ -56,7 +56,7 @@ export default async function Home() {
         
         <nav className="hidden md:flex gap-6 text-sm tracking-widest uppercase">
           <a href="#coleccion" className="hover:text-primary transition-colors">Colección</a>
-          <a href="#instagram" className="hover:text-primary transition-colors">Instagram</a>
+          <a href="#instagram" className="hover:text-primary transition-colors">Síguenos</a>
         </nav>
       </header>
 
