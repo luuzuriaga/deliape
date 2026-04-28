@@ -71,7 +71,7 @@ export default async function Home() {
                 {content?.heroTitulo || "Una nueva manera de moldear tu figura"}
               </h1>
               <p className="text-xl md:text-2xl font-sans font-light text-foreground/80 max-w-md leading-relaxed">
-                {content?.heroDescripcion || "Somos una marca peruana dedicada a elevar tu experiencia diaria. Combinamos telas inteligentes de última tecnología con diseños vanguardistas para ofrecerte la comodidad y calidad que mereces."}
+                {content?.heroDescripcion || "Innovación peruana en cada fibra. Unimos telas inteligentes con diseño esencial para ofrecerte el máximo confort diario."}
               </p>
               
               <div className="pt-4">
@@ -104,13 +104,9 @@ export default async function Home() {
                 ) : (
                   <FaFacebook className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer transition-opacity" />
                 )}
-                {socials?.tiktok ? (
-                  <a href={socials.tiktok} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
-                    <FaTiktok className="w-6 h-6" />
-                  </a>
-                ) : (
-                  <FaTiktok className="w-6 h-6 opacity-60 hover:opacity-100 cursor-pointer transition-opacity" />
-                )}
+                <a href={socials?.tiktok || "https://www.tiktok.com/@deliafajasylenceria"} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
+                  <FaTiktok className="w-6 h-6" />
+                </a>
               </div>
             </div>
           </div>
@@ -184,11 +180,9 @@ export default async function Home() {
                   <FaFacebook className="w-6 h-6" />
                 </a>
               )}
-              {socials?.tiktok && (
-                <a href={socials.tiktok} target="_blank" rel="noreferrer" className="text-foreground/60 hover:text-foreground hover:scale-110 transition-all">
-                  <FaTiktok className="w-6 h-6" />
-                </a>
-              )}
+              <a href={socials?.tiktok || "https://www.tiktok.com/@deliafajasylenceria"} target="_blank" rel="noreferrer" className="text-foreground/60 hover:text-foreground hover:scale-110 transition-all">
+                <FaTiktok className="w-6 h-6" />
+              </a>
             </div>
           </div>
           
