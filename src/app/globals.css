@@ -9,8 +9,12 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: #8E6B58; /* Lighter brown for accents */
-  --font-sans: var(--font-geist-sans), sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-montserrat), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
