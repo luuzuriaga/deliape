@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 import { ProductCard } from "@/components/ProductCard";
@@ -44,7 +45,7 @@ export default async function Home() {
       <header className="sticky top-0 z-50 py-4 bg-[#E1D9D1]/90 backdrop-blur-md border-b border-foreground/10 transition-all duration-300">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="relative w-32 h-10 md:w-48 md:h-12">
+            <Link href="/" className="relative w-32 h-10 md:w-48 md:h-12 block cursor-pointer">
               <Image 
                 src="/logo-delia.png" 
                 alt="Delia Fajas y Lencería Logo" 
@@ -52,7 +53,7 @@ export default async function Home() {
                 className="object-contain object-left"
                 priority
               />
-            </div>
+            </Link>
           </div>
           
           <nav className="flex gap-4 md:gap-6 text-xs md:text-sm font-medium tracking-widest uppercase text-foreground">
