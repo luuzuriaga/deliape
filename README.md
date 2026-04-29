@@ -10,7 +10,7 @@ Para asegurar que solo la dueña pueda entrar:
 
 1. Ingresa al panel de control de Sanity: [https://manage.sanity.io](https://manage.sanity.io)
 2. Selecciona el proyecto de **Delia**.
-3. Ve a la pestaña **Members**.
+3. Ir a la pestaña **Members**.
 4. Haz clic en **Invite Member**.
 5. Ingresa el correo electrónico de la dueña (Google/Email).
 6. Asígnale el rol de **Administrator** (para poder cambiar esquemas) o **Editor** (para solo editar contenido y no romper la configuración).
