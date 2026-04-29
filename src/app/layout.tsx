@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Delia Fajas y lenceria",
-  description: "Fajas y lencería peruanade la más alta calidad",
+  description: "Fajas y lencería peruana de la más alta calidad",
 };
 
 export default function RootLayout({
